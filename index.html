@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First GitHub Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Hello, GitHub!</h1>
+    <p>This project was created locally and pushed to a GitHub repository.</p>
+    <button id="actionBtn">Click Me</button>
+    <p id="status" class="status"></p>
+  </main>
+
+  <script>
+    const btn = document.getElementById("actionBtn");
+    const status = document.getElementById("status");
+    let count = 0;
+
+    btn.addEventListener("click", () => {
+      count += 1;
+      status.textContent = `Button clicked ${count} ${count === 1 ? "time" : "times"}.`;
+    });
+  </script>
+</body>
+</html>
